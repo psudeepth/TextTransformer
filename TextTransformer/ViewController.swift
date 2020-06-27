@@ -54,7 +54,14 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func strike(_ input: String) -> String{
-        return "Strike: " + input
+        var output = ""
+        
+        for each in input{
+            output.append(each)
+            output.append("\u{0335}")
+        }
+        
+        return output
     }
     
     func zalgo(_ input: String) -> String{
